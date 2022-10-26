@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import './Home.css';
 import styled from "styled-components";
 import Navbar from './Navbar';
-import {ethers} from "ethers";
-import {motion} from 'framer-motion';
+import { ethers } from "ethers";
+import { motion } from 'framer-motion';
 
 
 let provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -50,20 +50,20 @@ const Home = () => {
 
     // Connect Wallet
     if (typeof window.ethereum !== 'undefined') {
-    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-    setwalletAddress(accounts[0]);
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      setwalletAddress(accounts[0]);
 
-    const balance = await provider.getBalance(accounts[0]);
-    setbalance(ethers.utils.formatEther(balance));
- 
-    const data = await provider.getNetwork(accounts[0]);
-    setnetwork(data.name);
+      const balance = await provider.getBalance(accounts[0]);
+      setbalance(ethers.utils.formatEther(balance));
+
+      const data = await provider.getNetwork(accounts[0]);
+      setnetwork(data.name);
+    }
+
+
   }
 
 
-  }
-
-  
 
 
 
@@ -71,13 +71,13 @@ const Home = () => {
 
   return (
     <div className='hero-container' id="home">
-      <video src="/video-2.mp4" autoPlay loop muted/>
-      <h1>TRUEPNL</h1>
+      <video src="/video-2.mp4" autoPlay loop muted />
+      <h1>QUiCKSTART</h1>
       <p>What are you waiting for?</p>
-       {!walletAddress && (<Button buttonStyle='btn--outline' buttonSize='btn--large' onClick={connectWallet}>
+      {!walletAddress && (<Button buttonStyle='btn--outline' buttonSize='btn--large' onClick={connectWallet}>
         Connect Wallet
       </Button>)}
-    
+
       {/* 
       initial={{height:0}}
       animate={{height: '25vh'}}
@@ -85,39 +85,39 @@ const Home = () => {
       
        */}
 
-        {walletAddress &&  
+      {walletAddress &&
         (<>
-        <Box
-        initial={{height:0, margin: '30px' }}
-      animate={{height: '25vh', padding: '40px', margin: '30px'}}
-      transition={{type:'spring', duration:1, delay:1}}
-        
-        >
+          <Box
+            initial={{ height: 0, margin: '30px' }}
+            animate={{ height: '25vh', padding: '40px', margin: '30px' }}
+            transition={{ type: 'spring', duration: 1, delay: 1 }}
 
-        <Text
-      initial={{opacity:0}}
-      animate={{opacity: 1}}
-      transition={{duration:1, delay:2}}
-      >
-        <div>Status : Connected</div>
-        <div><i class="fa-solid fa-wallet"></i> : &nbsp;
-        {walletAddress} </div> 
-        <div><i class="fa-brands fa-ethereum"></i> : &nbsp;
-         {balance} 
-        {/* <i class="fa-brands fa-ethereum"></i> */}
-        </div>
-        <div><i class="fa-solid fa-wifi"></i> : &nbsp;
-         {network}</div>
-      </Text>
-        </Box>
-       
+          >
+
+            <Text
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 2 }}
+            >
+              <div>Status : Connected</div>
+              <div><i class="fa-solid fa-wallet"></i> : &nbsp;
+                {walletAddress} </div>
+              <div><i class="fa-brands fa-ethereum"></i> : &nbsp;
+                {balance}
+                {/* <i class="fa-brands fa-ethereum"></i> */}
+              </div>
+              <div><i class="fa-solid fa-wifi"></i> : &nbsp;
+                {network}</div>
+            </Text>
+          </Box>
+
         </>)}
-      
-          
-   
 
 
-       
+
+
+
+
     </div>
   )
 }
