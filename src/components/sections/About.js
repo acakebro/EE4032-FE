@@ -75,35 +75,35 @@ const About = () => {
         </Box>
         <Box>
           <Title>
-        <Typewriter  options={{
-    strings: ['Welcome to Truepnl', 'Start investing today'],
-    autoStart: true,
-    loop: true,
-    pauseFor: 1500,
-  }}
-  
-  // onInit={(typewriter)=> {
-   
-    
-  //   typewriter
-    
-  //   .typeString("Welcome to Truepnl")
-    
-  //   .pauseFor(1000)
-  //   .deleteAll()
-  //   .typeString("Start investing today")
-  //   .start();
-  // }}
-  
-  />
-  </Title>
-        <SubText>
-          With more than 50+ projects to choose from, start investing today.
-        </SubText>
-        <SubTextLight>
-          All of our projects are carefully selected and vetted to ensure that
-          your investments are processed securely.  
-        </SubTextLight>
+            <Typewriter options={{
+              strings: ['Welcome to QUICKSTART', 'Start investing today'],
+              autoStart: true,
+              loop: true,
+              pauseFor: 1500,
+            }}
+
+            // onInit={(typewriter)=> {
+
+
+            //   typewriter
+
+            //   .typeString("Welcome to Truepnl")
+
+            //   .pauseFor(1000)
+            //   .deleteAll()
+            //   .typeString("Start investing today")
+            //   .start();
+            // }}
+
+            />
+          </Title>
+          <SubText>
+            With more than 50+ projects to choose from, start investing today.
+          </SubText>
+          <SubTextLight>
+            All of our projects are carefully selected and vetted to ensure that
+            your investments are processed securely.
+          </SubTextLight>
         </Box>
       </Container>
     </Section>
