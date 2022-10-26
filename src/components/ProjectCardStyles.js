@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 export const ProjectContainer = styled.div`
    display: grid;
@@ -65,8 +65,8 @@ letter-spacing: 1px;
 `
 
 export const StatusRibbon = styled.div`
-background-color: ${({fundStatus}) => 
-fundStatus === 1 ? "#66A858" : "#df4949"};
+background-color: ${({ fundStatus }) =>
+    fundStatus === 1 ? "#66A858" : "#df4949"};
 border-radius: 13px;
 padding: 3px 10px;
 position: absolute;

@@ -1,35 +1,35 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { Author, Avatar, Card, CardBody, CardMedia, CardTitle, CtaGrp, CtaLink, Featured, FeatureTitle, Info, MetaInfo, MetaList, MetaListItem, Price, PriceInfo, PriceText, Status, StatusRibbon, Tags, TagsCta } from './ProjectCardStyles';
 
-const ProjectCard = ({data,open}) => {
+const ProjectCard = ({ data, open }) => {
   const [isHovered, setHovered] = useState(false);
 
-  const animateCandMedia = isHovered ? {height:"170px"} : {height:"auto"};
-  const showMeta = {opacity:1,height:"auto"};
-  const hideMeta = {opacity:0,height:0};
+  const animateCandMedia = isHovered ? { height: "100px" } : { height: "auto" };
+  const showMeta = { opacity: 1, height: "auto" };
+  const hideMeta = { opacity: 0, height: 0 };
   const animeMeta = isHovered ? hideMeta : showMeta;
   const animeMetaList = isHovered ? showMeta : hideMeta;
   const transition = {
     duration: 0.25,
-    type:"spring",
-    bounce:0.2,
-    ease:'easeIn',
+    type: "spring",
+    bounce: 0.2,
+    ease: 'easeIn',
   };
 
 
 
   return (
-    <Card 
-    onMouseEnter={() => setHovered(true)}
-    onMouseLeave={() => setHovered(false)}
-    key={data?.id}
-    onClick={open}
+    <Card
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      key={data?.id}
+      onClick={open}
     >
       <CardMedia animate={animateCandMedia} transition={transition}>
-        <img src={data?.projectImage} alt=""/>
+        <img src={data?.projectImage} alt="" />
         {data?.fundStatus === 2 && (
           <Featured>
             <FeatureTitle>ended!</FeatureTitle>
@@ -52,26 +52,26 @@ const ProjectCard = ({data,open}) => {
           <h5>{data?.projectTitle}</h5>
         </CardTitle>
         {!isHovered && (
-        <MetaInfo animate={animeMeta}>
-        <Author>
-          <Avatar>
-            <img src={data?.projectImage}></img>
-          </Avatar>
-        
-          <Info><span>Creator</span>
-            <h4>{data?.creatorName}</h4></Info>
-        </Author>
-        <PriceInfo>
-          <span>Funds Required</span>
+          <MetaInfo animate={animeMeta}>
+            <Author>
+              <Avatar>
+                <img src={data?.projectImage}></img>
+              </Avatar>
+
+              <Info><span>Creator</span>
+                <h4>{data?.creatorName}</h4></Info>
+            </Author>
+            <PriceInfo>
+              <span>Funds Required</span>
 
 
               <Price>
                 <PriceText>{data?.fundsRequired}</PriceText>
               </Price>
-        </PriceInfo>
-        
+            </PriceInfo>
 
-        </MetaInfo>)}
+
+          </MetaInfo>)}
         <TagsCta anime={animeMetaList}>
           <Tags>
             <span>milestone</span>
@@ -83,30 +83,33 @@ const ProjectCard = ({data,open}) => {
           </CtaGrp>
         </TagsCta>
         <MetaList animate={animeMetaList}>
-        <MetaListItem>
-        <div>Funds Required</div>
-        <div>{data?.metaList?.fund_1}</div>
-        </MetaListItem>
-        <MetaListItem>
-        <div>Funds Raised</div>
-        <div>{data?.metaList?.fund_2}</div>
-        </MetaListItem>
-         {/* <MetaListItem>
+          <MetaListItem>
+            <div>Funds Required</div>
+            <div>{data?.metaList?.fund_1}</div>
+          </MetaListItem>
+          <MetaListItem>
+            <div>Funds Raised</div>
+            <div>{data?.metaList?.fund_2}</div>
+          </MetaListItem>
+          {/* <MetaListItem>
         <div>Soft Cap</div>
         <div>{data?.metaList?.sort_cap}</div>
         </MetaListItem> */}
-         <MetaListItem>
-        <div>Investors</div>
-        <div>{data?.metaList?.investor_count}</div>
-        </MetaListItem>
-        <MetaListItem>
-        </MetaListItem>
-         <Link style={{textDecoration: 'none'}} to={"/project" +  data?.id}>
-          {/* {data?.fundStatus === 1 ? "Funding is Alive" : "Funding has ended"} */}
-          <Button>
+          <MetaListItem>
+            <div>Investors</div>
+            <div>{data?.metaList?.investor_count}</div>
+          </MetaListItem>
+          <MetaListItem>
+            <div>Duration</div>
+          </MetaListItem>
+          <MetaListItem>
+          </MetaListItem>
+          <Link style={{ textDecoration: 'none' }} to={"/project" + data?.id}>
+            {/* {data?.fundStatus === 1 ? "Funding is Alive" : "Funding has ended"} */}
+            <Button>
               Find Out More
-          </Button>
-            </Link>
+            </Button>
+          </Link>
         </MetaList>
         {/* <a href="https://github.com/tzw0/shoppeth/blob/master/src/components/topbar/Topbar.jsx">wtf</a> */}
         {/* <Link to="/detail">
@@ -114,8 +117,8 @@ const ProjectCard = ({data,open}) => {
               Find Out More
           </button>
             </Link> */}
-        
-      </CardBody> 
+
+      </CardBody>
 
 
     </Card>
