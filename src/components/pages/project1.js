@@ -191,7 +191,7 @@ export default function Project1 () {
     <DetailWrapper>
       <LeftContainer>
         <ImageSection>
-          <img layout="fill" src="https://cdn.dribbble.com/users/1790153/screenshots/11875906/media/2f2dad38661a368f7725bcd72056b490.png?compress=1&resize=400x300"/>
+          <img layout="fill" src="https://mir-s3-cdn-cf.behance.net/projects/404/6ac9b691738305.Y3JvcCw5MDIsNzA2LDM4OCwyNDM.jpg"/>
         </ImageSection>
         <Text>
           Imagine a place where blockchain projects can attract holders, receive investments, or find partners starting from zero. TruePNL proudly announces the launch of the native launchpad platform to make it all come true.

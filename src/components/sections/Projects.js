@@ -1,11 +1,11 @@
 import React from 'react';
 import {useState} from 'react';
 import styled from "styled-components";
-import Overlay from './Overlay';
+
 import ProjectCard from '../ProjectCard';
 import { ProjectContainer } from '../ProjectCardStyles';
 import { ProjectData } from '../ProjectData';
-import Modal from './Modal';
+
 
 const Section = styled.div`
    min-height: 100vh;

@@ -2,24 +2,184 @@ import styled from "styled-components";
 import React, {useState, useEffect} from 'react';
 import {ethers} from 'ethers';
 // import Image from "next/image";
+let provider = new ethers.providers.Web3Provider(window.ethereum);
+let signer = provider.getSigner();
 
-export default function Project2 () {
+export default function Project5 () {
+
+  // Read Data from smart contract 
+
+  // 1. Contract address
+
+  const contractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
+
+  // 2. Contract ABI
+  const abi = [
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "campaignTitle",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "requiredCampaignAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "imgURI",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "storyURI",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "campaignOwner",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "donar",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "donated",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "donate",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "image",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "receivedAmount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "requiredAmount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "story",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "title",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+  // 3. Provider
 
   const [amount, setAmount] = useState();
+   const [change, setChange] = useState(false);
+    const [mydonations, setMydonations] = useState([]);
+
+
+  
+
 
   const DonateFunds = async () => {
     try {
       await window.ethereum.request({ method: 'eth_requestAccounts' });
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      // const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       
-      // const contract = new ethers.Contract(Data.address, Campaign.abi, signer);
+      const contract = new ethers.Contract(contractAddress, abi, signer);
       
-      // const transaction = await contract.donate({value: ethers.utils.parseEther(amount)});
-      // await transaction.wait();
+      const transaction = await contract.donate({value: ethers.utils.parseEther(amount)});
+      await transaction.wait();
 
-      // setChange(true);
-      // setAmount('');
+      setChange(true);
+      setAmount('');
       
   } catch (error) {
       console.log(error);
@@ -31,7 +191,7 @@ export default function Project2 () {
     <DetailWrapper>
       <LeftContainer>
         <ImageSection>
-          <img layout="fill" height="300px" src="https://st.depositphotos.com/3207681/4211/v/450/depositphotos_42114737-stock-illustration-fox-with-a-flamethrower-logo.jpg"/>
+          <img layout="fill" src="https://mir-s3-cdn-cf.behance.net/projects/404/743116129536091.Y3JvcCwxMjE5LDk1Myw4NCwxODE3.png"/>
         </ImageSection>
         <Text>
           Imagine a place where blockchain projects can attract holders, receive investments, or find partners starting from zero. TruePNL proudly announces the launch of the native launchpad platform to make it all come true.
@@ -41,15 +201,11 @@ The platform allows cryptocurrency projects to raise funds by creating token exc
         </Text>
       </LeftContainer>
       <RightContainer>
-        <Title>Project 2</Title>
+        <Title>Project 5</Title>
           <DonateSection>
             <Input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" placeholder="Enter Amount:" />
             <Donate onClick={DonateFunds}>Donate</Donate>
           </DonateSection>
-          <CollectSection>
-            <Input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" placeholder="Enter Amount:" />
-            <Collect>Collect</Collect>
-          </CollectSection>
           <FundsData>
             <Funds>
               <FundText>Target Amount</FundText>
@@ -58,14 +214,6 @@ The platform allows cryptocurrency projects to raise funds by creating token exc
             <Funds>
               <FundText>Funds Raised</FundText>
               <FundText>5 ETH</FundText>
-            </Funds>
-            <Funds>
-              <FundText>Target Percentage Return</FundText>
-              <FundText>35%</FundText>
-            </Funds>
-            <Funds>
-              <FundText>Percentage Ownership</FundText>
-              <FundText>20%</FundText>
             </Funds>
           </FundsData>
           <Donated>
@@ -106,7 +254,7 @@ const ImageSection = styled.div`
 width: 100%;
 position: relative;
 height: 350px;
-margin-left: 100px;
+margin-left: 50px;
 `;
 
 const Text = styled.p`
@@ -130,13 +278,6 @@ justify-content: space-between;
 align-items: center;
 margin-top: 10px;
 `;
-const CollectSection = styled.div`
-display: flex;
-width: 100%;
-justify-content: space-between;
-align-items: center;
-margin-top: 10px;
-`;
 
 const Input = styled.input`
 padding: 8px 15px;
@@ -151,21 +292,6 @@ height: 40px;
 `;
 
 const Donate = styled.button`
-display: flex;
-justify-content: center;
-width: 40%;
-padding: 15px;
-color: white;
-background-color: #4717F6;
-background-image: linear-gradient(180deg, #4717F6 0%, #A2396A 80%);
-border: none;
-cursor: pointer;
-font-weight: bold;
-border-radius: 8px;
-font-size: large;
-`;
-
-const Collect = styled.button`
 display: flex;
 justify-content: center;
 width: 40%;
