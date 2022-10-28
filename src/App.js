@@ -16,6 +16,7 @@ import Project3 from './components/pages/project3';
 import Project4 from './components/pages/project4';
 import Project5 from './components/pages/project5';
 import Project6 from './components/pages/project6';
+import Roadmap from './components/sections/Roadmap';
 
 
 
@@ -32,11 +33,17 @@ function App() {
     <Route exact path="/" component={Projects}/>
     <Route exact path="/" component={Footer}/>
     <Route exact path="/project1" component={Project1}/>
+    <Route exact path="/project1" component={Roadmap}/>
     <Route exact path="/project2" component={Project2}/>
+    <Route exact path="/project2" component={Roadmap}/>
     <Route exact path="/project3" component={Project3}/>
+    <Route exact path="/project3" component={Roadmap}/>
     <Route exact path="/project4" component={Project4}/>
+    <Route exact path="/project4" component={Roadmap}/>
     <Route exact path="/project5" component={Project5}/>
+    <Route exact path="/project5" component={Roadmap}/>
     <Route exact path="/project6" component={Project6}/>
+    <Route exact path="/project6" component={Roadmap}/>
     </Router>
     </>
 
