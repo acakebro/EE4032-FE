@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { Author, Avatar, Card, CardBody, CardMedia, CardTitle, CtaGrp, CtaLink, Featured, FeatureTitle, Info, MetaInfo, MetaList, MetaListItem, Price, PriceInfo, PriceText, Status, StatusRibbon, Tags, TagsCta } from './ProjectCardStyles';
-
+import Timer from './timer';
 const ProjectCard = ({ data, open }) => {
   const [isHovered, setHovered] = useState(false);
 
@@ -100,7 +100,7 @@ const ProjectCard = ({ data, open }) => {
             <div>{data?.metaList?.investor_count}</div>
           </MetaListItem>
           <MetaListItem>
-            <div>Duration</div>
+            <div>Duration: <Timer/></div>
           </MetaListItem>
           <MetaListItem>
           </MetaListItem>
@@ -142,6 +142,4 @@ font-size: large;
 margin-top: -20px;
 `;
 
-
-
-export default ProjectCard
+export default ProjectCard;
