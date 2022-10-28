@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import "@fontsource/sora"
+import DrawSvg from './DrawSvg'
 
 const Section = styled.section`
 min-height: 100vh;
@@ -23,6 +24,22 @@ margin: 1rem auto;
 border-bottom: 2px solid #202020;
 width: fit-content;
 `;
+
+const Container = styled.div`
+width: 70%;
+height: 200vh;
+background-color: #fff;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+`
+const SvgContainer = styled.div`
+display: flex;
+justify-content: cente;
+align-items: center;
+`
 
 const Items = styled.ul`
 list-style:none;
@@ -124,6 +141,11 @@ const Roadmap = () => {
   return (
     <Section>
       <Title>Roadmap</Title>
+      <Container>
+        <SvgContainer>
+          <DrawSvg/>
+        </SvgContainer>
+
       <Items>
         <Item>&nbsp;</Item>
         <RoadMapItem title="Project launch" subtext=""/>
@@ -133,6 +155,7 @@ const Roadmap = () => {
         <RoadMapItem title="Q4" subtext="New White Paper"/>
         <RoadMapItem title="2023" subtext="Profit-sharing release"/>
       </Items>
+      </Container>
       </Section>
 
   )
