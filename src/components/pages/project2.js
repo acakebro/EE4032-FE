@@ -31,7 +31,7 @@ export default function Project2 () {
     <DetailWrapper>
       <LeftContainer>
         <ImageSection>
-          <img layout="fill" height="300px" src="https://www.pngitem.com/pimgs/m/522-5229208_corel-draw-simple-logo-design-hd-png-download.png"/>
+          <img layout="fill" height="300px" src="https://st.depositphotos.com/3207681/4211/v/450/depositphotos_42114737-stock-illustration-fox-with-a-flamethrower-logo.jpg"/>
         </ImageSection>
         <Text>
           Imagine a place where blockchain projects can attract holders, receive investments, or find partners starting from zero. TruePNL proudly announces the launch of the native launchpad platform to make it all come true.

@@ -5,7 +5,7 @@ import {ethers} from 'ethers';
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let signer = provider.getSigner();
 
-export default function Project1 () {
+export default function Project5 () {
 
   // Read Data from smart contract 
 
@@ -191,7 +191,7 @@ export default function Project1 () {
     <DetailWrapper>
       <LeftContainer>
         <ImageSection>
-          <img layout="fill" src="https://mir-s3-cdn-cf.behance.net/projects/404/6ac9b691738305.Y3JvcCw5MDIsNzA2LDM4OCwyNDM.jpg"/>
+          <img layout="fill" src="https://mir-s3-cdn-cf.behance.net/projects/404/743116129536091.Y3JvcCwxMjE5LDk1Myw4NCwxODE3.png"/>
         </ImageSection>
         <Text>
           Imagine a place where blockchain projects can attract holders, receive investments, or find partners starting from zero. TruePNL proudly announces the launch of the native launchpad platform to make it all come true.
@@ -201,7 +201,7 @@ The platform allows cryptocurrency projects to raise funds by creating token exc
         </Text>
       </LeftContainer>
       <RightContainer>
-        <Title>Project 1</Title>
+        <Title>Project 5</Title>
           <DonateSection>
             <Input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" placeholder="Enter Amount:" />
             <Donate onClick={DonateFunds}>Donate</Donate>

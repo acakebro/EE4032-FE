@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import { Button } from './Button';
-import BouncingText from 'react-bouncing-text';
+import Typewriter from "typewriter-effect";
 
 const Section = styled.div`
    min-height: 100vh;
@@ -69,16 +69,16 @@ const Getstarted = () => {
     <Section id="getstarted">
       <Container>
         <Box>
-        <Title>Invest with as little as 0.1ETH
-
-          {/* <BouncingText
-    text={"Invest with as little as 0.1ETH"}
-    clickable
-    hoverable 
-    delay={50}
-    duration={100}
-    ></BouncingText> */}
-    </Title>
+          <Title>
+            <Typewriter options={{
+              strings: ['Invest with as little as 0.1ETH', 'What are you waiting for?'],
+              autoStart: true,
+              loop: true,
+              pauseFor: 1000,
+              delay: 50
+            }}
+            />
+          </Title>
         <SubText>
           <i class="fa-solid fa-arrow-right"></i>
           &nbsp;

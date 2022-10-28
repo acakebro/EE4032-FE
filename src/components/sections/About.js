@@ -80,21 +80,8 @@ const About = () => {
               autoStart: true,
               loop: true,
               pauseFor: 1500,
+              delay: 75
             }}
-
-            // onInit={(typewriter)=> {
-
-
-            //   typewriter
-
-            //   .typeString("Welcome to Truepnl")
-
-            //   .pauseFor(1000)
-            //   .deleteAll()
-            //   .typeString("Start investing today")
-            //   .start();
-            // }}
-
             />
           </Title>
           <SubText>

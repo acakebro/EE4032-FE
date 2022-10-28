@@ -13,7 +13,10 @@ import Getstarted from './components/sections/Getstarted';
 import Project1 from './components/pages/project1';
 import Project2 from './components/pages/project2';
 import Project3 from './components/pages/project3';
-import Modal from './components/sections/Modal';
+import Project4 from './components/pages/project4';
+import Project5 from './components/pages/project5';
+import Project6 from './components/pages/project6';
+
 
 
 function App() {
@@ -31,40 +34,13 @@ function App() {
     <Route exact path="/project1" component={Project1}/>
     <Route exact path="/project2" component={Project2}/>
     <Route exact path="/project3" component={Project3}/>
+    <Route exact path="/project4" component={Project4}/>
+    <Route exact path="/project5" component={Project5}/>
+    <Route exact path="/project6" component={Project6}/>
     </Router>
-    {/* <Navbar/>
-    <Router>
-        <Home setSelectedMode={setSelectedMode}/>
-        <About/>
-    <Getstarted/>
-    <Projects/>
-    <Detail/>
-    <Footer/>
-    </Router> */}
+    </>
 
-    {/* <Switch>
-    <Route path="/modal" component={Modal}/>
-    </Switch> */}
-    
-    {/* <div className="App">
-      <h1>Latest Projects</h1>
-      <ProjectContainer>
-        {ProjectData?.map((item) => {
-          return (
-            <ProjectCard data={item}/>
-            )
-          })}
-      </ProjectContainer>
-    </div> */}
 
-     {/* <Router>
-      <Switch>
-        <Route path="/" exact component={Home}/>
-         <Route path={GlobalDomainPrefix + "/myshop"} > <Sell products={sellingData} /> </Route>
-        
-      </Switch>
-    </Router> */}
-          </>
   );
 }
 
