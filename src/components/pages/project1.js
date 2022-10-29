@@ -158,9 +158,10 @@ export default function Project1() {
 	];
 	// 3. Provider
 
-	const [amount, setAmount] = useState();
+	const [inAmount, setinAmount] = useState();
 	const [change, setChange] = useState(false);
 	const [mydonations, setMydonations] = useState([]);
+	const [outAmount, setoutAmount] = useState();
 
 	const DonateFunds = async () => {
 		try {
@@ -171,12 +172,12 @@ export default function Project1() {
 			const contract = new ethers.Contract(contractAddress, abi, signer);
 
 			const transaction = await contract.donate({
-				value: ethers.utils.parseEther(amount),
+				value: ethers.utils.parseEther(inAmount),
 			});
 			await transaction.wait();
 
 			setChange(true);
-			setAmount("");
+			setinAmount("");
 		} catch (error) {
 			console.log(error);
 		}
@@ -189,7 +190,7 @@ export default function Project1() {
 					<img
 						layout="fill"
 						src="https://mir-s3-cdn-cf.behance.net/projects/404/6ac9b691738305.Y3JvcCw5MDIsNzA2LDM4OCwyNDM.jpg"
-					/>
+						alt="project1placeholder" />
 				</ImageSection>
 				<Text>
 					Imagine a place where blockchain projects can attract holders, receive
@@ -208,8 +209,8 @@ export default function Project1() {
 				<Title>Project 1</Title>
 				<DonateSection>
 					<Input
-						value={amount}
-						onChange={(e) => setAmount(e.target.value)}
+						value={inAmount}
+						onChange={(e) => setinAmount(e.target.value)}
 						type="number"
 						placeholder="Enter Amount:"
 					/>
@@ -217,8 +218,8 @@ export default function Project1() {
 				</DonateSection>
 				<CollectSection>
 					<Input
-						value={amount}
-						onChange={(e) => setAmount(e.target.value)}
+						value={outAmount}
+						onChange={(e) => setoutAmount(e.target.value)}
 						type="number"
 						placeholder="Enter Amount:"
 					/>
