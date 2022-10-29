@@ -7,7 +7,7 @@ import Timer from './timer';
 const ProjectCard = ({ data, open }) => {
   const [isHovered, setHovered] = useState(false);
 
-  const animateCandMedia = isHovered ? { height: "170px" } : { height: "auto" };
+  const animateCandMedia = isHovered ? { height: "100px" } : { height: "auto" };
   const showMeta = { opacity: 1, height: "auto" };
   const hideMeta = { opacity: 0, height: 0 };
   const animeMeta = isHovered ? hideMeta : showMeta;
@@ -99,9 +99,10 @@ const ProjectCard = ({ data, open }) => {
             <div>Investors</div>
             <div>{data?.metaList?.investor_count}</div>
           </MetaListItem>
-          {/* <MetaListItem>
-            <div>Duration: <Timer /></div>
-          </MetaListItem> */}
+          <MetaListItem>
+            <div>Potential Returns</div>
+            <div>{data?.metaList?.ROI}%</div>
+          </MetaListItem>
           <MetaListItem>
           </MetaListItem>
           <Link style={{ textDecoration: 'none' }} to={"/project" + data?.id}>

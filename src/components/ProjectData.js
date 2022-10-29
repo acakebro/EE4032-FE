@@ -11,6 +11,7 @@ export const ProjectData = [{
     fund_1: "10 ETH",
     fund_2: "5 ETH",
     investor_count: 9,
+    ROI: 25
   },
   description: "ConsenSys is the leading Ethereum software company that enables developers, enterprises, and people worldwide to build next-generation applications, launch modern financial infrastructure, and access the decentralized web. ConsenSys product suite, composed of Infura, Quorum, Truffle, Codefi, MetaMask, and Diligence, serves millions of users, supports billions of blockchain-based queries for our clients, and has handled billions of dollars in digital assets.",
 
@@ -32,6 +33,7 @@ export const ProjectData = [{
     fund_1: "10 ETH",
     fund_2: "20 ETH",
     investor_count: 12,
+    ROI: 15
   },
 
 },
@@ -50,6 +52,7 @@ export const ProjectData = [{
     fund_1: "10 ETH",
     fund_2: "5 ETH",
     investor_count: 6,
+    ROI: 35
   },
   description: "ConsenSys is the leading Ethereum software company that enables developers, enterprises, and people worldwide to build next-generation applications, launch modern financial infrastructure, and access the decentralized web. ConsenSys product suite, composed of Infura, Quorum, Truffle, Codefi, MetaMask, and Diligence, serves millions of users, supports billions of blockchain-based queries for our clients, and has handled billions of dollars in digital assets.",
 
@@ -68,6 +71,7 @@ export const ProjectData = [{
     fund_1: "10 ETH",
     fund_2: "5 ETH",
     investor_count: 6,
+    ROI: 40
   },
   description: "ConsenSys is the leading Ethereum software company that enables developers, enterprises, and people worldwide to build next-generation applications, launch modern financial infrastructure, and access the decentralized web. ConsenSys product suite, composed of Infura, Quorum, Truffle, Codefi, MetaMask, and Diligence, serves millions of users, supports billions of blockchain-based queries for our clients, and has handled billions of dollars in digital assets.",
 
@@ -88,6 +92,7 @@ export const ProjectData = [{
     fund_1: "10 ETH",
     fund_2: "300 ETH",
     investor_count: 6,
+    ROI: 15
   },
   description: "ConsenSys is the leading Ethereum software company that enables developers, enterprises, and people worldwide to build next-generation applications, launch modern financial infrastructure, and access the decentralized web. ConsenSys product suite, composed of Infura, Quorum, Truffle, Codefi, MetaMask, and Diligence, serves millions of users, supports billions of blockchain-based queries for our clients, and has handled billions of dollars in digital assets.",
 
@@ -108,6 +113,7 @@ export const ProjectData = [{
     fund_1: "10 ETH",
     fund_2: "300 ETH",
     investor_count: 6,
+    ROI: 42
   },
   description: "ConsenSys is the leading Ethereum software company that enables developers, enterprises, and people worldwide to build next-generation applications, launch modern financial infrastructure, and access the decentralized web. ConsenSys product suite, composed of Infura, Quorum, Truffle, Codefi, MetaMask, and Diligence, serves millions of users, supports billions of blockchain-based queries for our clients, and has handled billions of dollars in digital assets.",
 
