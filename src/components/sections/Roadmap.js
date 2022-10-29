@@ -4,31 +4,35 @@ import "@fontsource/sora"
 import DrawSvg from './DrawSvg'
 
 const Section = styled.section`
+margin-top: -18px;
+padding-bottom: 40px;
 min-height: 100vh;
 width: 100vw;
-background-color: #fff;
-positionL relative;
+// background-color: #120458;
+background-image: linear-gradient(180deg, #0E0B16 0%, #fe75fe 99%);
+position: relative;
 `
 
 const Title = styled.h1`
 font-size: 60px;
 text-transform: capitalize;
 width: 80%;
-color: #202020;
+color: #fff;
 font-family: 'Sora';
 align-self: flex-start;
 display: flex;
 justify-content: center;
 align-items: center;
 margin: 1rem auto;
-border-bottom: 2px solid #202020;
+border-bottom: 2px solid #fff;
 width: fit-content;
+margin-bottom: 40px;
 `;
 
 const Container = styled.div`
 width: 70%;
 height: 200vh;
-background-color: #fff;
+// background-color: #fff;
 margin: 0 auto;
 display: flex;
 justify-content: center;
@@ -88,16 +92,16 @@ const ItemContainer = styled.div`
 width: 40%;
 height: fit-content;
 padding: 1rem;
-border: 3px solid #202020
+border: 3px solid #fff
 `
 
 const Box = styled.p`
 height: fit-content;
-background-color: #202020
+background-color: #fff
 color: #fff;
 padding: 1rem;
 position: relative;
-border: 1px solid #202020;
+border: 1px solid #fff;
 
 `
 
@@ -105,7 +109,7 @@ const SubTitle = styled.span`
 display: block;
 font-size: 40px;
 text-transform: capitalize;
-color: #202020;
+color: #fff;
 
 `
 
@@ -113,11 +117,15 @@ const Text = styled.span`
 display: block;
 font-size: 30px;
 text-transform: capitalize;
-color: #202020;
+color: #fff;
 
 font-weight: 400;
 margin: 0.5rem 0;
 `
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 
 const RoadMapItem = ({title, subtext}) => {
 
@@ -148,12 +156,12 @@ const Roadmap = () => {
 
       <Items>
         <Item>&nbsp;</Item>
-        <RoadMapItem title="Project launch" subtext=""/>
-        <RoadMapItem title="Q1" subtext="NFT sale"/>
-        <RoadMapItem title="Q2" subtext="Partnership Announcements"/>
-        <RoadMapItem title="Q3" subtext="Marketplace integration"/>
-        <RoadMapItem title="Q4" subtext="New White Paper"/>
-        <RoadMapItem title="2023" subtext="Profit-sharing release"/>
+        <RoadMapItem title="Project launch" subtext="Smart contract audit"/>
+        <RoadMapItem title="Q1" subtext="NFT sale, Whitelist and Token Generation Event"/>
+        <RoadMapItem title="Q2" subtext="Partnership Announcements, DEX listing"/>
+        <RoadMapItem title="Q3" subtext="Marketplace integration, Community launchpad"/>
+        <RoadMapItem title="Q4" subtext="New White Paper, Further chains integration"/>
+        <RoadMapItem title="2023" subtext="Profit-sharing release, Fully interoperable platform"/>
       </Items>
       </Container>
       </Section>

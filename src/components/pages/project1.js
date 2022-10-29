@@ -247,7 +247,7 @@ const DetailWrapper = styled.div`
 display: flex;
 justify-content: space-between;
 padding: 20px;
-width: 98%;
+width: 100%;
 background-color:#0E0B16 ;
 // background-color: #A2396A;
 // background-color: #4717F6;
