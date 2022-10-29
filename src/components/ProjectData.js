@@ -1,11 +1,12 @@
 export const ProjectData = [{
   id: 1,
-
+  projectStatus: "Funding Ended",
   projectTitle: "Project 1",
   projectImage: "https://mir-s3-cdn-cf.behance.net/projects/404/6ac9b691738305.Y3JvcCw5MDIsNzA2LDM4OCwyNDM.jpg",
   creatorName: "Timothy",
   fundsRequired: "25 ETH",
   fundStatus: 1,
+  daysToInvest: 4,
   metaList: {
     fund_1: "10 ETH",
     fund_2: "5 ETH",
@@ -26,6 +27,7 @@ export const ProjectData = [{
   creatorName: "Bryan",
   fundsRequired: "50 ETH",
   fundStatus: 2,
+  daysToInvest: 0,
   metaList: {
     fund_1: "10 ETH",
     fund_2: "20 ETH",
@@ -43,6 +45,7 @@ export const ProjectData = [{
   creatorName: "Thomas",
   fundsRequired: "100 ETH",
   fundStatus: 1,
+  daysToInvest: 2,
   metaList: {
     fund_1: "10 ETH",
     fund_2: "5 ETH",
@@ -60,6 +63,7 @@ export const ProjectData = [{
   creatorName: "Thomas",
   fundsRequired: "100 ETH",
   fundStatus: 1,
+  daysToInvest: 1,
   metaList: {
     fund_1: "10 ETH",
     fund_2: "5 ETH",
@@ -79,6 +83,7 @@ export const ProjectData = [{
   creatorName: "Thomas",
   fundsRequired: "100 ETH",
   fundStatus: 1,
+  daysToInvest: 4,
   metaList: {
     fund_1: "10 ETH",
     fund_2: "300 ETH",
@@ -98,6 +103,7 @@ export const ProjectData = [{
   creatorName: "Thomas",
   fundsRequired: "100 ETH",
   fundStatus: 1,
+  daysToInvest: 3,
   metaList: {
     fund_1: "10 ETH",
     fund_2: "300 ETH",
