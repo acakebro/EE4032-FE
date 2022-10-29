@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css'
 import Home from './Home';
@@ -41,7 +41,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to="home" className='navbar-logo' spy={true} smooth={true} offset={-80} duration={500} onClick={closeMobileMenu}>
+          <Link to={"/"} className='navbar-logo' >
             QUICKSTART  <i className="fa-solid fa-globe"></i>
           </Link>
           {/* <div className='menu-icon' onClick={handleClick}>

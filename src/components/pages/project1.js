@@ -210,6 +210,8 @@ export default function Project1() {
 					<Input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" placeholder="Enter Amount:" />
 					<Collect>Collect</Collect>
 				</CollectSection>
+				<Container>
+
 				<Details>
 					<FundsData>
 						<Funds>
@@ -229,17 +231,18 @@ export default function Project1() {
 							<FundText>20%</FundText>
 						</Funds>
 					</FundsData>
-					<HighestOwnershipData>
+					{/* <HighestOwnershipData>
 						<WhaleDetails>
-							<Ownership>757noi</Ownership>
-							<Ownership>3.5 ETH</Ownership>
+						<Ownership>757noi</Ownership>
+						<Ownership>3.5 ETH</Ownership>
 						</WhaleDetails>
 						<WhaleDetails>
-							<Ownership>burdenbc</Ownership>
-							<Ownership>1.5 ETH</Ownership>
+						<Ownership>burdenbc</Ownership>
+						<Ownership>1.5 ETH</Ownership>
 						</WhaleDetails>
-					</HighestOwnershipData>
+					</HighestOwnershipData> */}
 				</Details>
+					</Container>
 				<Donated>
 					<LiveDonation>
 						<DonationTitle>Recent Donation</DonationTitle>
@@ -366,6 +369,11 @@ border-radius: 8px;
 font-size: large;
 `;
 
+const Container = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr;
+`
+
 const FundsData = styled.div`
 width: 100%:
 display: flex;
@@ -374,7 +382,7 @@ margin-top: 10px;
 `;
 
 const Funds = styled.div`
-width: 45%;
+// width: 45%;
 background-color: #202020;
 padding: 8px;
 borde-radius: 8px;
@@ -389,7 +397,7 @@ font-size: normal;
 `;
 
 const HighestOwnershipData = styled.div`
-width: 100%:
+// width: 100%:
 display: flex;
 justify-content: space-between;
 margin-top: 10px;

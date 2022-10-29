@@ -50,6 +50,10 @@ The platform allows cryptocurrency projects to raise funds by creating token exc
             <Input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" placeholder="Enter Amount:" />
             <Collect>Collect</Collect>
           </CollectSection>
+
+          <Container>
+
+
           <FundsData>
             <Funds>
               <FundText>Target Amount</FundText>
@@ -67,7 +71,29 @@ The platform allows cryptocurrency projects to raise funds by creating token exc
               <FundText>Percentage Ownership</FundText>
               <FundText>20%</FundText>
             </Funds>
+            
           </FundsData>
+          <FundsData>
+            <Funds>
+              <FundText>Target Amount</FundText>
+              <FundText>10 ETH</FundText>
+            </Funds>
+            <Funds>
+              <FundText>Funds Raised</FundText>
+              <FundText>5 ETH</FundText>
+            </Funds>
+            <Funds>
+              <FundText>Target Percentage Return</FundText>
+              <FundText>35%</FundText>
+            </Funds>
+            <Funds>
+              <FundText>Percentage Ownership</FundText>
+              <FundText>20%</FundText>
+            </Funds>
+            
+          </FundsData>
+          </Container>
+          
           <Donated>
             <LiveDonation>
               <DonationTitle>Recent Donation</DonationTitle>
@@ -180,6 +206,11 @@ border-radius: 8px;
 font-size: large;
 `;
 
+const Container = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr;
+`
+
 const FundsData = styled.div`
 width: 100%:
 display: flex;
@@ -188,7 +219,7 @@ margin-top: 10px;
 `;
 
 const Funds = styled.div`
-width: 45%;
+// width: 45%;
 background-color: #202020;
 padding: 8px;
 borde-radius: 8px;
