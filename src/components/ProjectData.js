@@ -1,6 +1,6 @@
 export const ProjectData = [{
   id: 1,
-  projectStatus: "Funding Ended",
+
   projectTitle: "Project 1",
   projectImage: "https://mir-s3-cdn-cf.behance.net/projects/404/6ac9b691738305.Y3JvcCw5MDIsNzA2LDM4OCwyNDM.jpg",
   creatorName: "Timothy",
