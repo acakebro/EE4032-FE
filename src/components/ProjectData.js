@@ -7,6 +7,7 @@ export const ProjectData = [{
   fundsRequired: "25 ETH",
   fundStatus: 1,
   daysToInvest: 4,
+  timeLeft: { hours: 120, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
     fund_2: "5 ETH",
@@ -29,6 +30,7 @@ export const ProjectData = [{
   fundsRequired: "50 ETH",
   fundStatus: 2,
   daysToInvest: 0,
+  timeLeft: { hours: 80, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
     fund_2: "20 ETH",
@@ -48,6 +50,7 @@ export const ProjectData = [{
   fundsRequired: "100 ETH",
   fundStatus: 1,
   daysToInvest: 2,
+  timeLeft: { hours: 70, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
     fund_2: "5 ETH",
@@ -67,6 +70,7 @@ export const ProjectData = [{
   fundsRequired: "100 ETH",
   fundStatus: 1,
   daysToInvest: 1,
+  timeLeft: { hours: 60, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
     fund_2: "5 ETH",
@@ -88,6 +92,7 @@ export const ProjectData = [{
   fundsRequired: "100 ETH",
   fundStatus: 1,
   daysToInvest: 4,
+  timeLeft: { hours: 50, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
     fund_2: "300 ETH",
@@ -109,6 +114,7 @@ export const ProjectData = [{
   fundsRequired: "100 ETH",
   fundStatus: 1,
   daysToInvest: 3,
+  timeLeft: { hours: 40, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
     fund_2: "300 ETH",

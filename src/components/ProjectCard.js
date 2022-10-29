@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { Author, Avatar, Card, CardBody, CardMedia, CardTitle, CtaGrp, CtaLink, Featured, FeatureTitle, Info, MetaInfo, MetaList, MetaListItem, Price, PriceInfo, PriceText, Status, StatusRibbon, Tags, TagsCta } from './ProjectCardStyles';
-import Timer from './timer';
+import CountDownTimer from './countdowntimer';
+
 const ProjectCard = ({ data, open }) => {
   const [isHovered, setHovered] = useState(false);
 
@@ -39,7 +40,7 @@ const ProjectCard = ({ data, open }) => {
         <StatusRibbon fundStatus={data?.fundStatus}>
           <Status>
             {/* {data?.fundStatus === 1 ? "Funding is Alive" : "Funding has ended"} */}
-            {data?.fundStatus === 1 ? <Timer /> : "Funding has ended"}
+            {data?.fundStatus === 1 ? <CountDownTimer hoursMinSecs={data.timeLeft} /> : "Funding has ended"}
           </Status>
 
         </StatusRibbon>

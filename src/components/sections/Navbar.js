@@ -49,19 +49,27 @@ function Navbar() {
         </div> */}
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to="about" spy={true} smooth={true} offset={-20} duration={500} className='nav-links' onClick={closeMobileMenu}>
-                About
-              </Link>
+              
+                <a href="#about" className='nav-links'>
+                  About
+                </a>
+              
             </li>
             <li className='nav-item'>
-              <Link to="getstarted" spy={true} smooth={true} offset={10} duration={500} className='nav-links' onClick={closeMobileMenu}>
-                Get Started
-              </Link>
+                <a href="#getstarted" className='nav-links'>
+                    Get Started
+                </a>
+              {/* <Link to="getstarted" spy={true} smooth={true} offset={10} duration={500} className='nav-links' onClick={closeMobileMenu}>
+                
+              </Link> */}
             </li>
             <li className='nav-item'>
-              <Link to="projects" spy={true} smooth={true} offset={10} duration={500} className='nav-links' onClick={closeMobileMenu}>
+            <a href="#projects" className='nav-links'>
+            Projects
+                </a>
+              {/* <Link to="projects" spy={true} smooth={true} offset={10} duration={500} className='nav-links' onClick={closeMobileMenu}>
                 Projects
-              </Link>
+              </Link> */}
             </li>
 
           </ul>
