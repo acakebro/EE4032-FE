@@ -210,34 +210,36 @@ export default function Project1() {
 					<Input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" placeholder="Enter Amount:" />
 					<Collect>Collect</Collect>
 				</CollectSection>
-				<FundsData>
-					<Funds>
-						<FundText>Target Amount</FundText>
-						<FundText>10 ETH</FundText>
-					</Funds>
-					<Funds>
-						<FundText>Funds Raised</FundText>
-						<FundText>5 ETH</FundText>
-					</Funds>
-					<Funds>
-						<FundText>Target Percentage Return</FundText>
-						<FundText>30%</FundText>
-					</Funds>
-					<Funds>
-						<FundText>Percentage Ownership</FundText>
-						<FundText>20%</FundText>
-					</Funds>
-				</FundsData>
-				<HighestOwnershipData>
-					<WhaleDetails>
-						<Ownership>757noi</Ownership>
-						<Ownership>3.5 ETH</Ownership>
-					</WhaleDetails>
-					<WhaleDetails>
-						<Ownership>burdenbc</Ownership>
-						<Ownership>1.5 ETH</Ownership>
-					</WhaleDetails>
-				</HighestOwnershipData>
+				<Details>
+					<FundsData>
+						<Funds>
+							<FundText>Target Amount</FundText>
+							<FundText>10 ETH</FundText>
+						</Funds>
+						<Funds>
+							<FundText>Funds Raised</FundText>
+							<FundText>5 ETH</FundText>
+						</Funds>
+						<Funds>
+							<FundText>Target Percentage Return</FundText>
+							<FundText>30%</FundText>
+						</Funds>
+						<Funds>
+							<FundText>Percentage Ownership</FundText>
+							<FundText>20%</FundText>
+						</Funds>
+					</FundsData>
+					<HighestOwnershipData>
+						<WhaleDetails>
+							<Ownership>757noi</Ownership>
+							<Ownership>3.5 ETH</Ownership>
+						</WhaleDetails>
+						<WhaleDetails>
+							<Ownership>burdenbc</Ownership>
+							<Ownership>1.5 ETH</Ownership>
+						</WhaleDetails>
+					</HighestOwnershipData>
+				</Details>
 				<Donated>
 					<LiveDonation>
 						<DonationTitle>Recent Donation</DonationTitle>
@@ -257,6 +259,19 @@ const DetailWrapper = styled.div`
 display: flex;
 justify-content: space-between;
 padding: 20px;
+width: 100%;
+background-color:#0E0B16 ;
+// background-color: #A2396A;
+// background-color: #4717F6;
+// background-color: #E7DFDD;
+`;
+
+const Details = styled.div`
+display: flex;
+flexDirection: "row";
+flexWrap: "wrap",
+justify-content: space-evenly;
+
 width: 100%;
 background-color:#0E0B16 ;
 // background-color: #A2396A;
