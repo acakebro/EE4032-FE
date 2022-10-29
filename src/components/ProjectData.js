@@ -6,7 +6,6 @@ export const ProjectData = [{
   creatorName: "Timothy",
   fundsRequired: "25 ETH",
   fundStatus: 1,
-  daysToInvest: 4,
   timeLeft: { hours: 120, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
@@ -29,7 +28,6 @@ export const ProjectData = [{
   creatorName: "Bryan",
   fundsRequired: "50 ETH",
   fundStatus: 2,
-  daysToInvest: 0,
   timeLeft: { hours: 80, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
@@ -48,7 +46,6 @@ export const ProjectData = [{
   projectImage: "https://img.freepik.com/premium-vector/console-ninja-gaming-logo-design_100735-52.jpg",
   creatorName: "Thomas",
   fundsRequired: "100 ETH",
-  fundStatus: 1,
   daysToInvest: 2,
   timeLeft: { hours: 70, minutes: 59, seconds: 59 },
   metaList: {
@@ -69,7 +66,6 @@ export const ProjectData = [{
   creatorName: "Thomas",
   fundsRequired: "100 ETH",
   fundStatus: 1,
-  daysToInvest: 1,
   timeLeft: { hours: 60, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
@@ -91,7 +87,6 @@ export const ProjectData = [{
   creatorName: "Thomas",
   fundsRequired: "100 ETH",
   fundStatus: 1,
-  daysToInvest: 4,
   timeLeft: { hours: 50, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
@@ -113,7 +108,6 @@ export const ProjectData = [{
   creatorName: "Thomas",
   fundsRequired: "100 ETH",
   fundStatus: 1,
-  daysToInvest: 3,
   timeLeft: { hours: 40, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
