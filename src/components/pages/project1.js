@@ -206,6 +206,10 @@ The platform allows cryptocurrency projects to raise funds by creating token exc
             <Input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" placeholder="Enter Amount:" />
             <Donate onClick={DonateFunds}>Donate</Donate>
           </DonateSection>
+		  <CollectSection>
+			<Input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" placeholder="Enter Amount:" />
+			<Collect>Collect</Collect>
+		  </CollectSection>
           <FundsData>
             <Funds>
               <FundText>Target Amount</FundText>
@@ -214,6 +218,14 @@ The platform allows cryptocurrency projects to raise funds by creating token exc
             <Funds>
               <FundText>Funds Raised</FundText>
               <FundText>5 ETH</FundText>
+            </Funds>
+			<Funds>
+              <FundText>Target Percentage Return</FundText>
+              <FundText>30%</FundText>
+            </Funds>
+			<Funds>
+              <FundText>Percentage Ownership</FundText>
+              <FundText>20%</FundText>
             </Funds>
           </FundsData>
           <Donated>
@@ -279,6 +291,14 @@ align-items: center;
 margin-top: 10px;
 `;
 
+const CollectSection = styled.div`
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+margin-top: 10px;
+`;
+
 const Input = styled.input`
 padding: 8px 15px;
 background-color: #202020;
@@ -292,6 +312,21 @@ height: 40px;
 `;
 
 const Donate = styled.button`
+display: flex;
+justify-content: center;
+width: 40%;
+padding: 15px;
+color: white;
+background-color: #4717F6;
+background-image: linear-gradient(180deg, #4717F6 0%, #A2396A 80%);
+border: none;
+cursor: pointer;
+font-weight: bold;
+border-radius: 8px;
+font-size: large;
+`;
+
+const Collect = styled.button`
 display: flex;
 justify-content: center;
 width: 40%;
