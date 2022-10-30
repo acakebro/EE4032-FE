@@ -210,7 +210,7 @@ export default function Project2() {
           />
           <Donate onClick={DonateFunds}>Donate</Donate>
         </DonateSection>
-        <CollectSection>
+        {/* <CollectSection>
           <Input
             value={outAmount}
             onChange={(e) => setoutAmount(e.target.value)}
@@ -218,7 +218,7 @@ export default function Project2() {
             placeholder="Enter Amount:"
           />
           <Collect>Collect</Collect>
-        </CollectSection>
+        </CollectSection> */}
 
         <Container>
 

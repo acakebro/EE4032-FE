@@ -164,6 +164,7 @@ export default function Project1() {
 	const [mydonations, setMydonations] = useState([]);
 	const [outAmount, setoutAmount] = useState();
 
+
 	const DonateFunds = async () => {
 		try {
 			await window.ethereum.request({ method: "eth_requestAccounts" });
@@ -240,7 +241,7 @@ export default function Project1() {
 							</Funds>
 							<Funds>
 								<FundText>Funds Raised</FundText>
-								<FundText>5 ETH</FundText>
+								<FundText>5 ETH </FundText>
 							</Funds>
 							<Funds>
 								<FundText>Target Percentage Return</FundText>
