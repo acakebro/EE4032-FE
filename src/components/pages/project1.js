@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
+import "@fontsource/sora"
 import { ethers } from "ethers";
 // import Image from "next/image";
 let provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -10,152 +11,152 @@ export default function Project1() {
 
 	// 1. Contract address
 
-	const contractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
+	const contractAddress = "0x3c725134d74D5c45B4E4ABd2e5e2a109b5541288";
 
 	// 2. Contract ABI
 	const abi = [
-		{
-			inputs: [
-				{
-					internalType: "string",
-					name: "campaignTitle",
-					type: "string",
-				},
-				{
-					internalType: "uint256",
-					name: "requiredCampaignAmount",
-					type: "uint256",
-				},
-				{
-					internalType: "string",
-					name: "imgURI",
-					type: "string",
-				},
-				{
-					internalType: "string",
-					name: "storyURI",
-					type: "string",
-				},
-				{
-					internalType: "address",
-					name: "campaignOwner",
-					type: "address",
-				},
-			],
-			stateMutability: "nonpayable",
-			type: "constructor",
-		},
-		{
-			anonymous: false,
-			inputs: [
-				{
-					indexed: true,
-					internalType: "address",
-					name: "donar",
-					type: "address",
-				},
-				{
-					indexed: true,
-					internalType: "uint256",
-					name: "amount",
-					type: "uint256",
-				},
-				{
-					indexed: true,
-					internalType: "uint256",
-					name: "timestamp",
-					type: "uint256",
-				},
-			],
-			name: "donated",
-			type: "event",
-		},
-		{
-			inputs: [],
-			name: "donate",
-			outputs: [],
-			stateMutability: "payable",
-			type: "function",
-		},
-		{
-			inputs: [],
-			name: "image",
-			outputs: [
-				{
-					internalType: "string",
-					name: "",
-					type: "string",
-				},
-			],
-			stateMutability: "view",
-			type: "function",
-		},
-		{
-			inputs: [],
-			name: "owner",
-			outputs: [
-				{
-					internalType: "address payable",
-					name: "",
-					type: "address",
-				},
-			],
-			stateMutability: "view",
-			type: "function",
-		},
-		{
-			inputs: [],
-			name: "receivedAmount",
-			outputs: [
-				{
-					internalType: "uint256",
-					name: "",
-					type: "uint256",
-				},
-			],
-			stateMutability: "view",
-			type: "function",
-		},
-		{
-			inputs: [],
-			name: "requiredAmount",
-			outputs: [
-				{
-					internalType: "uint256",
-					name: "",
-					type: "uint256",
-				},
-			],
-			stateMutability: "view",
-			type: "function",
-		},
-		{
-			inputs: [],
-			name: "story",
-			outputs: [
-				{
-					internalType: "string",
-					name: "",
-					type: "string",
-				},
-			],
-			stateMutability: "view",
-			type: "function",
-		},
-		{
-			inputs: [],
-			name: "title",
-			outputs: [
-				{
-					internalType: "string",
-					name: "",
-					type: "string",
-				},
-			],
-			stateMutability: "view",
-			type: "function",
-		},
-	];
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "campaignTitle",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "requiredCampaignAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "imgURI",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "storyURI",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "campaignOwner",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "donar",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "timestamp",
+				"type": "uint256"
+			}
+		],
+		"name": "donated",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "donate",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "image",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "receivedAmount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "requiredAmount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "story",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "title",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
 	// 3. Provider
 
 	const [inAmount, setinAmount] = useState();
@@ -172,12 +173,17 @@ export default function Project1() {
 			const contract = new ethers.Contract(contractAddress, abi, signer);
 
 			const transaction = await contract.donate({
-				value: ethers.utils.parseEther(inAmount),
+				value: ethers.utils.parseEther(inAmount)
+	
 			});
 			await transaction.wait();
+			// console.log(transaction.value);
 
 			setChange(true);
 			setinAmount("");
+
+			// const info =  web3.eth.getTransactionReceipt(tx.result);           
+			// console.log(info);
 		} catch (error) {
 			console.log(error);
 		}
@@ -216,7 +222,7 @@ export default function Project1() {
 					/>
 					<Donate onClick={DonateFunds}>Donate</Donate>
 				</DonateSection>
-				<CollectSection>
+				{/* <CollectSection>
 					<Input
 						value={outAmount}
 						onChange={(e) => setoutAmount(e.target.value)}
@@ -224,7 +230,7 @@ export default function Project1() {
 						placeholder="Enter Amount:"
 					/>
 					<Collect>Collect</Collect>
-				</CollectSection>
+				</CollectSection> */}
 				<Container>
 					<Details>
 						<FundsData>
@@ -310,7 +316,8 @@ const ImageSection = styled.div`
 `;
 
 const Text = styled.p`
-  font-family: "Roboto";
+  // font-family: "Roboto";
+font-family: 'Sora';
   font-size: large;
   color: #e7dfdd;
   text-align: justify;
@@ -400,7 +407,7 @@ const Funds = styled.div`
 const FundText = styled.p`
   margin: 2px;
   padding: 0;
-  font-family: "Poppins";
+  font-family: 'Sora';
   font-size: normal;
 `;
 
@@ -419,7 +426,7 @@ const WhaleDetails = styled.div`
 const Ownership = styled.p`
   margin: 2px;
   padding: 0;
-  font-family: "Poppins";
+  font-family: 'Sora';
   font-size: normal;
 `;
 

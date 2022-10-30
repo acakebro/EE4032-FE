@@ -167,6 +167,7 @@ export default function Project2() {
         value: ethers.utils.parseEther(inAmount),
       });
       await transaction.wait();
+      console.log(transaction.value);
 
       setChange(true);
       setinAmount("");
