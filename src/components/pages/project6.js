@@ -13,36 +13,31 @@ export default function Project1() {
 
 	// 1. Contract address
 
-	const contractAddress = "0x3c725134d74D5c45B4E4ABd2e5e2a109b5541288";
+	const contractAddress = "0x5BC0702A363e3aE0D67C68C310B98D8F5765635e";
 
 	// 2. Contract ABI
 	const abi = [
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "campaignTitle",
-				"type": "string"
-			},
-			{
 				"internalType": "uint256",
-				"name": "requiredCampaignAmount",
+				"name": "_minDeposit",
 				"type": "uint256"
 			},
 			{
-				"internalType": "string",
-				"name": "imgURI",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "_minDividend",
+				"type": "uint256"
 			},
 			{
-				"internalType": "string",
-				"name": "storyURI",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "_minPledgeAmt",
+				"type": "uint256"
 			},
 			{
-				"internalType": "address",
-				"name": "campaignOwner",
-				"type": "address"
+				"internalType": "uint256",
+				"name": "_minDuration",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "nonpayable",
@@ -52,63 +47,455 @@ export default function Project1() {
 		"anonymous": false,
 		"inputs": [
 			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "donar",
-				"type": "address"
-			},
-			{
-				"indexed": true,
+				"indexed": false,
 				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			},
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "timestamp",
+				"name": "id",
 				"type": "uint256"
 			}
 		],
-		"name": "donated",
+		"name": "Cancel",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "Claim",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "creator",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "goal",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "startAt",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "endAt",
+				"type": "uint256"
+			}
+		],
+		"name": "Launch",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "caller",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "Pledge",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "caller",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "Refund",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "caller",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "Unpledge",
 		"type": "event"
 	},
 	{
 		"inputs": [],
-		"name": "donate",
+		"name": "MINDEPOSIT",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MINDIVIDEND",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MINDURATION",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MINPLEDGEAMT",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "campaigns",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "creator",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "goal",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "deposit",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pledged",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "startAt",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "endAt",
+				"type": "uint256"
+			},
+			{
+				"internalType": "enum QuickStart.Status",
+				"name": "status",
+				"type": "uint8"
+			},
+			{
+				"internalType": "bool",
+				"name": "claimed",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "cancel",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "claim",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "count",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "creatorExists",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "creators",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "creator",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "goal",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "deposit",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pledged",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "startAt",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "endAt",
+				"type": "uint256"
+			},
+			{
+				"internalType": "enum QuickStart.Status",
+				"name": "status",
+				"type": "uint8"
+			},
+			{
+				"internalType": "bool",
+				"name": "claimed",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "creatorsDeposit",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getBalance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_goal",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_startAt",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_endAt",
+				"type": "uint256"
+			}
+		],
+		"name": "launch",
 		"outputs": [],
 		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "image",
-		"outputs": [
+		"inputs": [
 			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
 			}
 		],
-		"stateMutability": "view",
+		"name": "pledge",
+		"outputs": [],
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
+		"inputs": [
 			{
-				"internalType": "address payable",
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
 				"name": "",
 				"type": "address"
 			}
 		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "receivedAmount",
+		"name": "pledgedAmount",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -120,43 +507,39 @@ export default function Project1() {
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "requiredAmount",
-		"outputs": [
+		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "",
+				"name": "_id",
 				"type": "uint256"
 			}
 		],
-		"stateMutability": "view",
+		"name": "refund",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "story",
-		"outputs": [
+		"inputs": [
 			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
 			}
 		],
-		"stateMutability": "view",
+		"name": "unpledge",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "title",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
+		"stateMutability": "payable",
+		"type": "receive"
 	}
 ]
 	// 3. Provider
@@ -175,8 +558,8 @@ export default function Project1() {
 
 			const contract = new ethers.Contract(contractAddress, abi, signer);
 
-			const transaction = await contract.donate({
-				value: ethers.utils.parseEther(inAmount)
+			const transaction = await contract.pledge({
+				value: ethers.utils.parseEther(inAmount) /1e18
 	
 			});
 			await transaction.wait();
@@ -188,7 +571,7 @@ export default function Project1() {
 			// const info =  web3.eth.getTransactionReceipt(tx.result);           
 			// console.log(info);
 		} catch (error) {
-			alert('Please input a valid amount');
+			console.log(error);
 		}
 	};
 
