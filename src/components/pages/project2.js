@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
+import { abi } from "abi";
 // import Image from "next/image";
 
 export default function Project2() {
