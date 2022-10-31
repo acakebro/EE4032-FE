@@ -179,6 +179,8 @@ export default function Project1() {
 			});
 			await transaction.wait();
 			// console.log(transaction.value);
+			console.log(inAmount);
+			console.log(typeof(inAmount));
 
 			setChange(true);
 			setinAmount("");

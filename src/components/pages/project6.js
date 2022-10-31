@@ -4,6 +4,7 @@ import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import "@fontsource/sora"
 import { ethers } from "ethers";
+import { parseBytes32String, parseEther } from "ethers/lib/utils";
 // import Image from "next/image";
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let signer = provider.getSigner();
@@ -559,7 +560,9 @@ export default function Project1() {
 			const contract = new ethers.Contract(contractAddress, abi, signer);
 
 			const transaction = await contract.pledge({
-				value: ethers.utils.parseEther(inAmount) /1e18
+				value: ethers.utils.parseEther(inAmount)
+				// value: ethers.utils.parseEther(inAmount),
+				
 	
 			});
 			await transaction.wait();
