@@ -5,7 +5,7 @@ import DrawSvg from './DrawSvg'
 
 const Section = styled.section`
 margin-top: -18px;
-padding-bottom: 40px;
+padding-bottom: 20px;
 min-height: 100vh;
 width: 100vw;
 // background-color: #120458;

@@ -1,5 +1,3 @@
-
-
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import "@fontsource/sora"
@@ -9,7 +7,7 @@ import { abi } from "abi";
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let signer = provider.getSigner();
 
-export default function Project1() {
+export default function Project3() {
 	// Read Data from smart contract
 
 	// 1. Contract address
@@ -166,7 +164,9 @@ export default function Project1() {
 	const [change, setChange] = useState(false);
 	const [mydonations, setMydonations] = useState([]);
 	const [outAmount, setoutAmount] = useState();
+	const [walletAddress, setwalletAddress] = useState();
 
+	
 
 	const DonateFunds = async () => {
 		try {
@@ -178,10 +178,11 @@ export default function Project1() {
 
 			const transaction = await contract.donate({
 				value: ethers.utils.parseEther(inAmount)
-	
 			});
+
+			const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      setwalletAddress(accounts[0]);
 			await transaction.wait();
-			// console.log(transaction.value);
 
 			setChange(true);
 			setinAmount("");
@@ -189,7 +190,7 @@ export default function Project1() {
 			// const info =  web3.eth.getTransactionReceipt(tx.result);           
 			// console.log(info);
 		} catch (error) {
-			console.log(error);
+			alert('Please key in a valid amount of ETH')
 		}
 	};
 
@@ -200,23 +201,17 @@ export default function Project1() {
 					<img
 						layout="fill"
 						src="https://mir-s3-cdn-cf.behance.net/projects/404/743116129536091.Y3JvcCwxMjE5LDk1Myw4NCwxODE3.png"
-						alt="project1placeholder" />
+						height="300px" />
 				</ImageSection>
 				<Text>
-					Imagine a place where blockchain projects can attract holders, receive
-					investments, or find partners starting from zero. TruePNL proudly
-					announces the launch of the native launchpad platform to make it all
-					come true. TruePNL introduces a platform to connect hand-picked,
-					groundbreaking blockchain projects and crypto investors, delivering a
-					convenient, transparent, and secure mechanism for raising capital,
-					investing and distributing tokens. The platform allows cryptocurrency
-					projects to raise funds by creating token exchange pools and launching
-					public or private sales rounds using smart contracts on the Ethereum
-					and Binance Smart Chain networks.
+					Most logistics companies today offer only the location details of main locations like collection centre, city hubs and sorting facilities. 
+					The exact live location details are never known, and if the system fails, the entire data is lost.
+          Using blockchain, our projects implements a system to collect location data from many interconnected systems and deliver exact location details to the customers.
+					 The application of this project can be extended to other areas like airlines to find lost baggage, car rentals for tracking rented car etc.
 				</Text>
 			</LeftContainer>
 			<RightContainer>
-				<Title>Project 1</Title>
+				<Title>Project 5</Title>
 				<DonateSection>
 					<Input
 						value={inAmount}
@@ -257,30 +252,40 @@ export default function Project1() {
 						</FundsData>
 						<HighestOwnershipData>
 							<WhaleDetails>
+								<Ownership>Top Donors:</Ownership>
 								<Ownership>0xD180c50c5Fe07805eA7e1a339db8dFE24911710a</Ownership>
-								<Ownership>3.5 ETH</Ownership>
+								<Ownership>3 ETH</Ownership>
 							</WhaleDetails>
 							<WhaleDetails>
-								<Ownership>burdenbc</Ownership>
-								<Ownership>1.5 ETH</Ownership>
+								<Ownership>0xG9d0c503nd8s9aedfnnew8239db8dFE19f7sn21l</Ownership>
+								<Ownership>2 ETH</Ownership>
+							</WhaleDetails>
+							<WhaleDetails>
+								<Ownership>0xjnd8f9af317813db397fdbf9d7f24f42fbdfdf79</Ownership>
+								<Ownership>1 ETH</Ownership>
 							</WhaleDetails>
 						</HighestOwnershipData>
 					</Details>
 				</Container>
 				<Donated>
 					<LiveDonation>
-						<DonationTitle>Recent Donation</DonationTitle>
-						<Donation>
+						<a target = "/" href="https://goerli.etherscan.io/address/0x3c725134d74D5c45B4E4ABd2e5e2a109b5541288">
+
+						<DonationTitle>Click here to view recent transactions</DonationTitle>
+						</a>
+						{/* <Donation>
 							<DonationData>0xf7233e2a224...Y31</DonationData>
 							<DonationData>1.5 ETH</DonationData>
 							<DonationData>6/03/2021, 9:11:03 AM</DonationData>
-						</Donation>
+						</Donation> */}
 					</LiveDonation>
 				</Donated>
 			</RightContainer>
 		</DetailWrapper>
 	);
 }
+
+
 
 const DetailWrapper = styled.div`
   display: flex;
@@ -435,7 +440,7 @@ const Ownership = styled.p`
 `;
 
 const Donated = styled.div`
-  height: 280px;
+  height: 160px;
   margin-top: 15px;
   background-color: #202020;
 `;
@@ -449,7 +454,7 @@ const DonationTitle = styled.div`
   font-family: "Roboto";
   font-size: x-small;
   text-transform: uppercase;
-  padding: 4px;
+  padding: 10px;
   text-align: center;
   background-color: #a2396a;
 `;
@@ -469,3 +474,9 @@ const DonationData = styled.p`
   margin: 0;
   padding: 0;
 `;
+<<<<<<< Updated upstream
+=======
+
+
+
+>>>>>>> Stashed changes

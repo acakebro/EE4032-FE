@@ -50,7 +50,7 @@ function DrawSvg() {
 
     let svg = document.getElementsByClassName("svg-path")[0];
 
-    const length = svg.getTotalLength();
+    const length = svg.getTotalLength() + 150;
     
 
     svg.style.strokeDasharray = length;
