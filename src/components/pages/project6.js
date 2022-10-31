@@ -200,7 +200,7 @@ export default function Project3() {
 					<img
 						layout="fill"
 						src="https://cdn.logojoy.com/wp-content/uploads/2018/05/01113800/887.png" height="300px"
-						height="300px" />
+						 />
 				</ImageSection>
 				<Text>
 					Most logistics companies today offer only the location details of main locations like collection centre, city hubs and sorting facilities. 
