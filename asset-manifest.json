@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f7588af2.css",
+    "main.js": "/static/js/main.adb61b5c.js",
+    "static/js/787.8517b185.chunk.js": "/static/js/787.8517b185.chunk.js",
+    "static/media/sora-all-400-normal.woff": "/static/media/sora-all-400-normal.4e0eb869ce00863294f7.woff",
+    "static/media/sora-latin-400-normal.woff2": "/static/media/sora-latin-400-normal.a12f18b2fa36ee4a1216.woff2",
+    "static/media/sora-latin-ext-400-normal.woff2": "/static/media/sora-latin-ext-400-normal.256bd69d954f04ef5548.woff2",
+    "index.html": "/index.html",
+    "main.f7588af2.css.map": "/static/css/main.f7588af2.css.map",
+    "main.adb61b5c.js.map": "/static/js/main.adb61b5c.js.map",
+    "787.8517b185.chunk.js.map": "/static/js/787.8517b185.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7588af2.css",
+    "static/js/main.adb61b5c.js"
+  ]
+}
