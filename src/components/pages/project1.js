@@ -2,10 +2,8 @@ import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import "@fontsource/sora"
 import { ethers } from "ethers";
-// import Image from "next/image";
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let signer = provider.getSigner();
-import { abi } from "abi";
 
 export default function Project1() {
 	// Read Data from smart contract

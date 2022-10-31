@@ -2,7 +2,6 @@ import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import "@fontsource/sora"
 import { ethers } from "ethers";
-import { abi } from "abi";
 // import Image from "next/image";
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let signer = provider.getSigner();
@@ -474,9 +473,6 @@ const DonationData = styled.p`
   margin: 0;
   padding: 0;
 `;
-<<<<<<< Updated upstream
-=======
 
 
 
->>>>>>> Stashed changes
