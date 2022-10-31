@@ -41,7 +41,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to={"/"} className='navbar-logo' >
+          <Link to={"/EE4032-FE/"} className='navbar-logo' >
             QUICKSTART  <i className="fa-solid fa-globe"></i>
           </Link>
           {/* <div className='menu-icon' onClick={handleClick}>
@@ -49,24 +49,24 @@ function Navbar() {
         </div> */}
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              
-                <a href="#about" className='nav-links'>
-                  About
-                </a>
-              
+
+              <a href="#about" className='nav-links'>
+                About
+              </a>
+
             </li>
             <li className='nav-item'>
-                <a href="#getstarted" className='nav-links'>
-                    Get Started
-                </a>
+              <a href="#getstarted" className='nav-links'>
+                Get Started
+              </a>
               {/* <Link to="getstarted" spy={true} smooth={true} offset={10} duration={500} className='nav-links' onClick={closeMobileMenu}>
                 
               </Link> */}
             </li>
             <li className='nav-item'>
-            <a href="#projects" className='nav-links'>
-            Projects
-                </a>
+              <a href="#projects" className='nav-links'>
+                Projects
+              </a>
               {/* <Link to="projects" spy={true} smooth={true} offset={10} duration={500} className='nav-links' onClick={closeMobileMenu}>
                 Projects
               </Link> */}

@@ -71,7 +71,7 @@ const Home = () => {
 
   return (
     <div className='hero-container' id="home">
-      <video src="/video-2.mp4" autoPlay loop muted />
+      <video src="/EE4032-FE/video-2.mp4" autoPlay loop muted />
       <h1>QUICKSTART</h1>
       <p>What are you waiting for?</p>
       {!walletAddress && (<Button buttonStyle='btn--outline' buttonSize='btn--large' onClick={connectWallet}>

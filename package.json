@@ -2,6 +2,7 @@
   "name": "cards",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://acakebro.github.io/EE4032-FE",
   "dependencies": {
     "@fontsource/sora": "^4.5.10",
     "@testing-library/jest-dom": "^5.16.5",
@@ -22,6 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

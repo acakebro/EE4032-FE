@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/sections/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProjectCard from './components/ProjectCard';
-import {ProjectContainer} from './components/ProjectCardStyles'
+import { ProjectContainer } from './components/ProjectCardStyles'
 import { ProjectData } from './components/ProjectData';
 import Home from './components/sections/Home';
 import About from './components/sections/About';
@@ -26,27 +26,27 @@ function App() {
   const [selectedMode, setSelectedMode] = useState('open')
   return (
     <>
-    <Router>
-    <Navbar/>
-    <Route exact path="/" component={Home}/>
-    <Route exact path="/" component={About}/>
-    <Route exact path="/" component={Getstarted}/>
-    <Route exact path="/" component={Projects}/>
-    <Route exact path="/" component={Footer}/>
-    <Route path="/project1" exact component={Project1}/>
-    <Route path="/project1" component={Roadmap}/>
-    <Route exact path="/project2" component={Project2}/>
-    <Route exact path="/project2" component={Roadmap}/>
-    <Route exact path="/project3" component={Project3}/>
-    <Route exact path="/project3" component={Roadmap}/>
-    <Route exact path="/project4" component={Project4}/>
-    <Route exact path="/project4" component={Roadmap}/>
-    <Route exact path="/project5" component={Project5}/>
-    <Route exact path="/project5" component={Roadmap}/>
-    <Route exact path="/project6" component={Project6}/>
-    <Route exact path="/project6" component={Roadmap}/>
-    <GoToTop/>
-    </Router>
+      <Router>
+        <Navbar />
+        <Route path="/EE4032-FE/project1" component={Project1} />
+        <Route path="/EE4032-FE/project1" component={Roadmap} />
+        <Route path="/EE4032-FE/project2" component={Project2} />
+        <Route path="/EE4032-FE/project2" component={Roadmap} />
+        <Route path="/EE4032-FE/project3" component={Project3} />
+        <Route path="/EE4032-FE/project3" component={Roadmap} />
+        <Route path="/EE4032-FE/project4" component={Project4} />
+        <Route path="/EE4032-FE/project4" component={Roadmap} />
+        <Route path="/EE4032-FE/project5" component={Project5} />
+        <Route path="/EE4032-FE/project5" component={Roadmap} />
+        <Route path="/EE4032-FE/project6" component={Project6} />
+        <Route path="/EE4032-FE/project6" component={Roadmap} />
+        <Route path="/EE4032-FE/" component={Home} />
+        <Route path="/EE4032-FE/" component={About} />
+        <Route path="/EE4032-FE/" component={Getstarted} />
+        <Route path="/EE4032-FE/" component={Projects} />
+        <Route path="/EE4032-FE/" component={Footer} />
+        <GoToTop />
+      </Router>
     </>
 
 
