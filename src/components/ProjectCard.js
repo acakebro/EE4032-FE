@@ -106,7 +106,7 @@ const ProjectCard = ({ data, open }) => {
           </MetaListItem>
           <MetaListItem>
           </MetaListItem>
-          <Link style={{ textDecoration: 'none' }} to={"/EE4032-FE/project" + data?.id}>
+          <Link style={{ textDecoration: 'none' }} to={"/project" + data?.id}>
             {/* {data?.fundStatus === 1 ? "Funding is Alive" : "Funding has ended"} */}
             <Button>
               Find Out More

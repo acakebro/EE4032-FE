@@ -28,18 +28,18 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <Route path="/EE4032-FE/project1" component={Project1} />
-        <Route path="/EE4032-FE/project1" component={Roadmap} />
-        <Route path="/EE4032-FE/project2" component={Project2} />
-        <Route path="/EE4032-FE/project2" component={Roadmap} />
-        <Route path="/EE4032-FE/project3" component={Project3} />
-        <Route path="/EE4032-FE/project3" component={Roadmap} />
-        <Route path="/EE4032-FE/project4" component={Project4} />
-        <Route path="/EE4032-FE/project4" component={Roadmap} />
-        <Route path="/EE4032-FE/project5" component={Project5} />
-        <Route path="/EE4032-FE/project5" component={Roadmap} />
-        <Route path="/EE4032-FE/project6" component={Project6} />
-        <Route path="/EE4032-FE/project6" component={Roadmap} />
+        <Route path="/project1" component={Project1} />
+        <Route path="/project1" component={Roadmap} />
+        <Route path="/project2" component={Project2} />
+        <Route path="/project2" component={Roadmap} />
+        <Route path="/project3" component={Project3} />
+        <Route path="/project3" component={Roadmap} />
+        <Route path="/project4" component={Project4} />
+        <Route path="/project4" component={Roadmap} />
+        <Route path="/project5" component={Project5} />
+        <Route path="/project5" component={Roadmap} />
+        <Route path="/project6" component={Project6} />
+        <Route path="/project6" component={Roadmap} />
         <Route path="/EE4032-FE/" component={Home} />
         <Route path="/EE4032-FE/" component={About} />
         <Route path="/EE4032-FE/" component={Getstarted} />
