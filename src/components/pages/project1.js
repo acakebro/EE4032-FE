@@ -5,157 +5,16 @@ import { ethers } from "ethers";
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let signer = provider.getSigner();
 
+
 export default function Project1() {
 	// Read Data from smart contract
 
 	// 1. Contract address
 
-	const contractAddress = "0x3c725134d74D5c45B4E4ABd2e5e2a109b5541288";
+	const contractAddress = "0xd036DE4a24E86c517654c60Ee5bf72d6f50Fce0E";
 
 	// 2. Contract ABI
-	const abi = [
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "campaignTitle",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "requiredCampaignAmount",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "imgURI",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "storyURI",
-				"type": "string"
-			},
-			{
-				"internalType": "address",
-				"name": "campaignOwner",
-				"type": "address"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "donar",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			},
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "timestamp",
-				"type": "uint256"
-			}
-		],
-		"name": "donated",
-		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "donate",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "image",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"internalType": "address payable",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "receivedAmount",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "requiredAmount",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "story",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "title",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
-]
+	const abi = [{"inputs":[{"internalType":"uint256","name":"_minDeposit","type":"uint256"},{"internalType":"uint256","name":"_minDividend","type":"uint256"},{"internalType":"uint256","name":"_minPledgeAmt","type":"uint256"},{"internalType":"uint256","name":"_minDuration","type":"uint256"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"id","type":"uint256"}],"name":"Cancel","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"id","type":"uint256"}],"name":"Claim","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"id","type":"uint256"},{"indexed":true,"internalType":"address","name":"creator","type":"address"},{"indexed":false,"internalType":"uint256","name":"goal","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"startAt","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"endAt","type":"uint256"}],"name":"Launch","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"id","type":"uint256"},{"indexed":true,"internalType":"address","name":"caller","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"Pledge","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"id","type":"uint256"},{"indexed":false,"internalType":"address","name":"caller","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"Refund","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"id","type":"uint256"},{"indexed":true,"internalType":"address","name":"caller","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"Unpledge","type":"event"},{"inputs":[],"name":"MINDEPOSIT","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"MINDIVIDEND","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"MINDURATION","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"MINPLEDGEAMT","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"campaigns","outputs":[{"internalType":"address","name":"creator","type":"address"},{"internalType":"string","name":"name","type":"string"},{"internalType":"uint256","name":"goal","type":"uint256"},{"internalType":"uint256","name":"deposit","type":"uint256"},{"internalType":"uint256","name":"pledged","type":"uint256"},{"internalType":"uint256","name":"startAt","type":"uint256"},{"internalType":"uint256","name":"endAt","type":"uint256"},{"internalType":"enum QuickStart.Status","name":"status","type":"uint8"},{"internalType":"bool","name":"claimed","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_id","type":"uint256"}],"name":"cancel","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_id","type":"uint256"}],"name":"claim","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"count","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"creatorExists","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"creators","outputs":[{"internalType":"address","name":"creator","type":"address"},{"internalType":"string","name":"name","type":"string"},{"internalType":"uint256","name":"goal","type":"uint256"},{"internalType":"uint256","name":"deposit","type":"uint256"},{"internalType":"uint256","name":"pledged","type":"uint256"},{"internalType":"uint256","name":"startAt","type":"uint256"},{"internalType":"uint256","name":"endAt","type":"uint256"},{"internalType":"enum QuickStart.Status","name":"status","type":"uint8"},{"internalType":"bool","name":"claimed","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"creatorsDeposit","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"uint256","name":"_goal","type":"uint256"},{"internalType":"uint256","name":"_startAt","type":"uint256"},{"internalType":"uint256","name":"_endAt","type":"uint256"}],"name":"launch","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_id","type":"uint256"}],"name":"pledge","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"address","name":"","type":"address"}],"name":"pledgedAmount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_id","type":"uint256"}],"name":"refund","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_id","type":"uint256"},{"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"unpledge","outputs":[],"stateMutability":"nonpayable","type":"function"},{"stateMutability":"payable","type":"receive"}];
 	// 3. Provider
 
 	const [inAmount, setinAmount] = useState();
@@ -163,8 +22,16 @@ export default function Project1() {
 	const [mydonations, setMydonations] = useState([]);
 	const [outAmount, setoutAmount] = useState();
 	const [walletAddress, setwalletAddress] = useState();
+	const [balance, setbalance] = useState();
 
-	
+
+	const readDataFromSmartContract = async () => {
+
+    const contract = new ethers.Contract(contractAddress, abi, signer);
+    const balance =  await contract.getBalance();
+		setbalance(balance/1e18);
+    }
+
 
 	const DonateFunds = async () => {
 		try {
@@ -174,7 +41,7 @@ export default function Project1() {
 
 			const contract = new ethers.Contract(contractAddress, abi, signer);
 
-			const transaction = await contract.donate({
+			const transaction = await contract.pledge(0, {
 				value: ethers.utils.parseEther(inAmount)
 			});
 
@@ -191,6 +58,36 @@ export default function Project1() {
 			alert('Please key in a valid amount of ETH')
 		}
 	};
+
+	// const Returnfunds = async () => {
+	// 	try {
+	// 		await window.ethereum.request({ method: "eth_requestAccounts" });
+	// 		// const provider = new ethers.providers.Web3Provider(window.ethereum);
+	// 		const signer = provider.getSigner();
+
+	// 		const contract = new ethers.Contract(contractAddress, abi, signer);
+
+	// 		// const transaction = await contract.unpledge(0, {
+	// 		// 	value: ethers.utils.parseEther(outAmount)
+	// 		// });
+	// 		const transaction = await contract.unpledge(0, outAmount
+	// 			);
+
+	// 		const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+  //     setwalletAddress(accounts[0]);
+	// 		await transaction.wait();
+
+	// 		setChange(true);
+	// 		setinAmount("");
+
+	// 		// const info =  web3.eth.getTransactionReceipt(tx.result);           
+	// 		// console.log(info);
+	// 	} catch (error) {
+	// 		alert('U did not pledge a valid amount')
+	// 	}
+	// };
+
+
 
 	return (
 		<DetailWrapper>
@@ -217,7 +114,9 @@ export default function Project1() {
 						type="number"
 						placeholder="Enter Amount:"
 					/>
-					<Donate onClick={DonateFunds}>Donate</Donate>
+					<Donate onClick={()=> {
+						DonateFunds(); 
+					}}>Donate</Donate>
 				</DonateSection>
 				{/* <CollectSection>
 					<Input
@@ -226,7 +125,9 @@ export default function Project1() {
 						type="number"
 						placeholder="Enter Amount:"
 					/>
-					<Collect>Collect</Collect>
+					<Collect onClick={() => {
+						Returnfunds();
+					}}>Collect</Collect>
 				</CollectSection> */}
 				<Container>
 					<Details>
@@ -235,9 +136,9 @@ export default function Project1() {
 								<FundText>Target Amount</FundText>
 								<FundText>10 ETH</FundText>
 							</Funds>
-							<Funds>
+							<Funds>								
 								<FundText>Funds Raised</FundText>
-								<FundText>5 ETH </FundText>
+								<FundText onClick={readDataFromSmartContract()}>{balance} ETH </FundText>
 							</Funds>
 							<Funds>
 								<FundText>Target Percentage Return</FundText>
@@ -267,7 +168,7 @@ export default function Project1() {
 				</Container>
 				<Donated>
 					<LiveDonation>
-						<a target = "/" href="https://goerli.etherscan.io/address/0x3c725134d74D5c45B4E4ABd2e5e2a109b5541288">
+						<a target = "/" href="https://goerli.etherscan.io/address/0xd036DE4a24E86c517654c60Ee5bf72d6f50Fce0E">
 
 						<DonationTitle>Click here to view recent transactions</DonationTitle>
 						</a>
