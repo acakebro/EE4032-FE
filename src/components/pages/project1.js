@@ -59,7 +59,7 @@ export default function Project1() {
 		}
 	};
 
-	// const Returnfunds = async () => {
+	// const ReturnFunds = async () => {
 	// 	try {
 	// 		await window.ethereum.request({ method: "eth_requestAccounts" });
 	// 		// const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -67,11 +67,9 @@ export default function Project1() {
 
 	// 		const contract = new ethers.Contract(contractAddress, abi, signer);
 
-	// 		// const transaction = await contract.unpledge(0, {
-	// 		// 	value: ethers.utils.parseEther(outAmount)
-	// 		// });
-	// 		const transaction = await contract.unpledge(0, outAmount
-	// 			);
+
+	// 		// const transaction = await contract.unpledge(0, outAmount
+	// 		// 	);
 
 	// 		const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
   //     setwalletAddress(accounts[0]);
@@ -126,7 +124,7 @@ export default function Project1() {
 						placeholder="Enter Amount:"
 					/>
 					<Collect onClick={() => {
-						Returnfunds();
+						ReturnFunds();
 					}}>Collect</Collect>
 				</CollectSection> */}
 				<Container>
