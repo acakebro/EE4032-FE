@@ -4,12 +4,12 @@ export const ProjectData = [{
   projectTitle: "Project 1",
   projectImage: "https://mir-s3-cdn-cf.behance.net/projects/404/6ac9b691738305.Y3JvcCw5MDIsNzA2LDM4OCwyNDM.jpg",
   creatorName: "Timothy",
-  fundsRequired: "25 ETH",
+  fundsRequired: "10 ETH",
   fundStatus: 1,
   timeLeft: { hours: 120, minutes: 59, seconds: 59 },
   metaList: {
     fund_1: "10 ETH",
-    fund_2: "5 ETH",
+    fund_2: "0.08 ETH",
     investor_count: 2,
     ROI: 25
   },
@@ -30,7 +30,7 @@ export const ProjectData = [{
   fundStatus: 2,
   timeLeft: { hours: 80, minutes: 59, seconds: 59 },
   metaList: {
-    fund_1: "10 ETH",
+    fund_1: "50 ETH",
     fund_2: "20 ETH",
     investor_count: 12,
     ROI: 15
@@ -49,7 +49,7 @@ export const ProjectData = [{
   daysToInvest: 2,
   timeLeft: { hours: 70, minutes: 59, seconds: 59 },
   metaList: {
-    fund_1: "10 ETH",
+    fund_1: "100 ETH",
     fund_2: "5 ETH",
     investor_count: 6,
     ROI: 35
@@ -64,11 +64,11 @@ export const ProjectData = [{
   projectTitle: "Project 4",
   projectImage: "https://cdn.dribbble.com/users/68544/screenshots/16605661/media/44cad084e28d0990c71953df0540b466.png?compress=1&resize=400x300",
   creatorName: "Thomas",
-  fundsRequired: "100 ETH",
+  fundsRequired: "15 ETH",
   fundStatus: 1,
   timeLeft: { hours: 60, minutes: 59, seconds: 59 },
   metaList: {
-    fund_1: "10 ETH",
+    fund_1: "15 ETH",
     fund_2: "5 ETH",
     investor_count: 6,
     ROI: 40
@@ -85,12 +85,12 @@ export const ProjectData = [{
   projectTitle: "Project 5",
   projectImage: "https://mir-s3-cdn-cf.behance.net/projects/404/743116129536091.Y3JvcCwxMjE5LDk1Myw4NCwxODE3.png",
   creatorName: "Thomas",
-  fundsRequired: "100 ETH",
+  fundsRequired: "30 ETH",
   fundStatus: 1,
   timeLeft: { hours: 50, minutes: 59, seconds: 59 },
   metaList: {
-    fund_1: "10 ETH",
-    fund_2: "300 ETH",
+    fund_1: "30 ETH",
+    fund_2: "17 ETH",
     investor_count: 6,
     ROI: 15
   },
@@ -106,12 +106,12 @@ export const ProjectData = [{
   projectTitle: "Project 6",
   projectImage: "https://cdn.logojoy.com/wp-content/uploads/2018/05/01113800/887.png",
   creatorName: "Thomas",
-  fundsRequired: "100 ETH",
+  fundsRequired: "8 ETH",
   fundStatus: 1,
   timeLeft: { hours: 40, minutes: 59, seconds: 59 },
   metaList: {
-    fund_1: "10 ETH",
-    fund_2: "300 ETH",
+    fund_1: "8 ETH",
+    fund_2: "6 ETH",
     investor_count: 6,
     ROI: 42
   },

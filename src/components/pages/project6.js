@@ -203,10 +203,9 @@ export default function Project3() {
 						 />
 				</ImageSection>
 				<Text>
-					Most logistics companies today offer only the location details of main locations like collection centre, city hubs and sorting facilities. 
-					The exact live location details are never known, and if the system fails, the entire data is lost.
-          Using blockchain, our projects implements a system to collect location data from many interconnected systems and deliver exact location details to the customers.
-					 The application of this project can be extended to other areas like airlines to find lost baggage, car rentals for tracking rented car etc.
+					The way web hosting works today is by hosting all the web content including textual content, code and media content on a centralized location which can then be accessed over the world wide web. But did you know? Your site is going to be down when there is server maintenance or if a load of the server gets high.
+
+What if with blockchain, your website doesn’t require a central server? Our project's goal through the use of blockchain is to split your website content into granules and distribute it all over the internet and then link them together using a blockchain registry.
 				</Text>
 			</LeftContainer>
 			<RightContainer>
@@ -234,20 +233,20 @@ export default function Project3() {
 						<FundsData>
 							<Funds>
 								<FundText>Target Amount</FundText>
-								<FundText>10 ETH</FundText>
+								<FundText>8 ETH</FundText>
 							</Funds>
 							<Funds>
 								<FundText>Funds Raised</FundText>
-								<FundText>5 ETH </FundText>
+								<FundText>6 ETH </FundText>
 							</Funds>
 							<Funds>
 								<FundText>Target Percentage Return</FundText>
 								<FundText>30%</FundText>
 							</Funds>
-							<Funds>
+							{/* <Funds>
 								<FundText>Percentage Ownership</FundText>
 								<FundText>20%</FundText>
-							</Funds>
+							</Funds> */}
 						</FundsData>
 						<HighestOwnershipData>
 							<WhaleDetails>

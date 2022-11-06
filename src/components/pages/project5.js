@@ -203,10 +203,7 @@ export default function Project3() {
 						height="300px" />
 				</ImageSection>
 				<Text>
-					Most logistics companies today offer only the location details of main locations like collection centre, city hubs and sorting facilities. 
-					The exact live location details are never known, and if the system fails, the entire data is lost.
-          Using blockchain, our projects implements a system to collect location data from many interconnected systems and deliver exact location details to the customers.
-					 The application of this project can be extended to other areas like airlines to find lost baggage, car rentals for tracking rented car etc.
+					Most brands and companies reward customers with their own loyalty points. A drawback in today’s system is a very unacceptable downside as the deserving customer cannot use his loyalty points with other companies or brands. Customers also cannot exchange or trade loyalty points with friends or family. With blockchain, our project's goal is to allow consumers to combine and transparently trade loyalty rewards. 
 				</Text>
 			</LeftContainer>
 			<RightContainer>
@@ -234,20 +231,20 @@ export default function Project3() {
 						<FundsData>
 							<Funds>
 								<FundText>Target Amount</FundText>
-								<FundText>10 ETH</FundText>
+								<FundText>30 ETH</FundText>
 							</Funds>
 							<Funds>
 								<FundText>Funds Raised</FundText>
-								<FundText>5 ETH </FundText>
+								<FundText>17 ETH </FundText>
 							</Funds>
 							<Funds>
 								<FundText>Target Percentage Return</FundText>
 								<FundText>30%</FundText>
 							</Funds>
-							<Funds>
+							{/* <Funds>
 								<FundText>Percentage Ownership</FundText>
 								<FundText>20%</FundText>
-							</Funds>
+							</Funds> */}
 						</FundsData>
 						<HighestOwnershipData>
 							<WhaleDetails>

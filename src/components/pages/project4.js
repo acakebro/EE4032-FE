@@ -205,10 +205,9 @@ export default function Project3() {
 						height="300px" />
 				</ImageSection>
 				<Text>
-					Most logistics companies today offer only the location details of main locations like collection centre, city hubs and sorting facilities. 
-					The exact live location details are never known, and if the system fails, the entire data is lost.
-          Using blockchain, our projects implements a system to collect location data from many interconnected systems and deliver exact location details to the customers.
-					 The application of this project can be extended to other areas like airlines to find lost baggage, car rentals for tracking rented car etc.
+					You want to eat organic. You can buy organic, but do you really know if it’s organic? You know that there is an outbreak of bird-flu in few poultry farms, but do you know if the chicken leg in your plate came from one of those infected farms?
+
+Using blockchain technology, our project seeks to implement a system that can help consumers trace back the journey of fresh produce or meat to its source. Thereby, consumers can buy the product with a lot more trust.
 				</Text>
 			</LeftContainer>
 			<RightContainer>
@@ -236,7 +235,7 @@ export default function Project3() {
 						<FundsData>
 							<Funds>
 								<FundText>Target Amount</FundText>
-								<FundText>10 ETH</FundText>
+								<FundText>15 ETH</FundText>
 							</Funds>
 							<Funds>
 								<FundText>Funds Raised</FundText>
@@ -246,10 +245,10 @@ export default function Project3() {
 								<FundText>Target Percentage Return</FundText>
 								<FundText>30%</FundText>
 							</Funds>
-							<Funds>
+							{/* <Funds>
 								<FundText>Percentage Ownership</FundText>
 								<FundText>20%</FundText>
-							</Funds>
+							</Funds> */}
 						</FundsData>
 						<HighestOwnershipData>
 							<WhaleDetails>

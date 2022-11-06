@@ -142,10 +142,10 @@ export default function Project1() {
 								<FundText>Target Percentage Return</FundText>
 								<FundText>30%</FundText>
 							</Funds>
-							<Funds>
+							{/* <Funds>
 								<FundText>Percentage Ownership</FundText>
 								<FundText>20%</FundText>
-							</Funds>
+							</Funds> */}
 						</FundsData>
 						<HighestOwnershipData>
 							<WhaleDetails>
