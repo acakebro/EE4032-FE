@@ -1,0 +1,60 @@
+{
+  "name": "react-date-countdown-timer",
+  "version": "1.1.0",
+  "description": "Date countdown timer component with a cool animaton for react.js",
+  "main": "build/index.js",
+  "keywords": [
+    "react",
+    "react-date-countdown",
+    "react-timer",
+    "date-countdown",
+    "countdown"
+  ],
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack --mode=production",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.4.2"
+  },
+  "files": [
+    "/build"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-react-jsx": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/react": "^6.3.12",
+    "babel-loader": "^8.0.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "react-dom": "^17.0.2",
+    "style-loader": "^0.23.0",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0"
+  },
+  "author": {
+    "name": "cengizhanbasak",
+    "email": "cengizhanbasakk@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cengizhanbasak/react-date-countdown-timer"
+  },
+  "license": "MIT"
+}
